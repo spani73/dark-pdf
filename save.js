@@ -13,7 +13,6 @@ const AWS = require('aws-sdk');
 
 // });
 
-// const filename = 'index.html';
 
 
 
@@ -35,9 +34,9 @@ app.post('/upload',function(req,res){
     var file = req.files.upfile,
       name = file.name,
       type = file.mimetype;
-    //File where .docx will be downloaded  
+    //File where pdf will be downloaded
     var uploadpath = __dirname + '/uploads/' + name;
-    //Name of the file --ex test,example
+    //Name of the file 
     const First_name = name.split('.')[0];
     //Name to download the file
     down_name = First_name;
@@ -49,9 +48,6 @@ app.post('/upload',function(req,res){
         var initialPath = path.join(__dirname, `./uploads/${First_name}${extend_docx}`);
         //Path where the converted pdf will be placed/uploaded
         var upload_path = path.join(__dirname, `./uploads/${First_name}${extend_pdf}`);
-        //Converter to convert docx to pdf -->docx-pdf is used
-        //If you want you can use any other converter
-        //For example -- libreoffice-convert or --awesome-unoconv
         docxConverter(initialPath,upload_path,function(err,result){
         if(err){
           console.log(err);
