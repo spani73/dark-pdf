@@ -1,0 +1,23 @@
+{
+  "name": "pdf_converter",
+  "version": "1.0.0",
+  "description": "An online application to convert pdf into darkmode",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nodejs",
+    "express"
+  ],
+  "author": "Subhankar Panigrahi",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1183.0",
+    "docx-pdf": "0.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "fs": "^0.0.1-security"
+  }
+}
